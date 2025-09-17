@@ -447,3 +447,56 @@ youtube.com##yt-live-chat-membership-item-renderer
 !youtube.com##.ytp-info-panel-preview
 ! watch on youtube overlay
 !youtube.com##.ytp-impression-link
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! merged in stuff from other lists !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!! nolive
+
+!!!! global elements
+!!! sidebar navigation
+! live tab
+www.youtube.com##ytd-guide-entry-renderer:has-text(Live)
+www.youtube.com##ytd-mini-guide-entry-renderer:has-text(Live)
+!! channels
+! channel is live indicator
+www.youtube.com##.ytd-guide-entry-renderer>tp-yt-paper-item>yt-icon.guide-entry-badge:has(svg)
+
+!!!! homepage
+!! video
+! channel live badge
+www.youtube.com##.yt-spec-avatar-shape__live-badge
+www.youtube.com##.yt-spec-avatar-shape--live-ring:remove-class(yt-spec-avatar-shape--live-ring)
+
+!!!! /channel page
+!! tabs
+! live tab
+www.youtube.com##tp-yt-paper-tab:has(> .tab-content:has-text(Live))
+www.youtube.com##yt-tab-shape[tab-title="Live"]
+
+!!!! video browsing
+! remove live videos
+!www.youtube.com##ytd-rich-item-renderer:has(.badge-style-type-live-now-alternate)
+!www.youtube.com##ytd-grid-video-renderer:has(.badge-style-type-live-now-alternate)
+!www.youtube.com##ytd-video-renderer:has(.badge-style-type-live-now-alternate)
+!m.youtube.com##ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="LIVE"])
+! remove streamed videos
+!www.youtube.com##ytd-rich-item-renderer:has(#metadata-line>span:has-text(Streamed))
+!www.youtube.com##ytd-grid-video-renderer:has(#metadata-line>span:has-text(Streamed))
+!www.youtube.com##ytd-video-renderer:has(#metadata-line>span:has-text(Streamed))
+!m.youtube.com##ytm-video-with-context-renderer:has(ytm-badge-and-byline-renderer>span:has-text(Streamed))
+! remove upcoming videos
+www.youtube.com##ytd-rich-item-renderer>ytd-thumbnail:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-grid-video-renderer>ytd-thumbnail:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-video-renderer>ytd-thumbnail:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+!! header
+! live chips
+m.youtube.com##ytm-chip-cloud-chip-renderer[ellipsis-truncate-styling="Live"]
+
+!!!! /video
+!! live chat replay prompt
+www.youtube.com###teaser-carousel:has(h2:has-text(Live chat replay))
+!! paused/ stopped overlay
+! video endscreen
+www.youtube.com##.ytp-videowall-still[data-is-live=true]

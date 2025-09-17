@@ -646,3 +646,52 @@ youtube.com###offer-module
 ! key moments/chapters
 !www.youtube.com###expandable-metadata
 
+!!!!!!!!!!!!!!!!!!!
+!!!!!! noshorts !!!
+
+!!!! generics
+!! shelves
+! generic shorts shelf (channel, search)
+www.youtube.com##ytd-reel-shelf-renderer
+m.youtube.com##ytm-reel-shelf-renderer
+
+!!!! global elements
+!!! sidebar navigation
+! sidebar
+www.youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+www.youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
+! homepage tab (mobile)
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-bar-item-title:has-text(Shorts))
+
+!!!! /homepage
+!!! shelves
+! homepage shelf (#15)
+www.youtube.com##ytd-rich-shelf-renderer[is-shorts]
+m.youtube.com##ytm-rich-section-renderer:has(>ytm-reel-shelf-renderer)
+
+!!!! /channel page
+!! tabs
+! shorts tab
+youtube.com##tp-yt-paper-tab:has(> .tab-content:has-text(Shorts))
+youtube.com##yt-tab-shape[tab-title="Shorts"]
+
+!!!! video browsing
+! videos that resolve to /shorts/
+www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
+www.youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
+www.youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
+m.youtube.com##ytm-video-with-context-renderer:has(a[href^="/shorts/"])
+! videos with shorts icons
+www.youtube.com##ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=SHORTS])
+www.youtube.com##ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=SHORTS])
+www.youtube.com##ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=SHORTS])
+m.youtube.com##ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"])
+! video title with #shorts
+www.youtube.com##ytd-rich-item-renderer:has(a#video-title>yt-formatted-string:has-text(#shorts))
+www.youtube.com##ytd-grid-video-renderer:has(a#video-title>yt-formatted-string:has-text(#shorts))
+www.youtube.com##ytd-video-renderer:has(a#video-title>yt-formatted-string:has-text(#shorts))
+
+!!!! /video
+!! paused/ stopped overlay
+! video endscreen
+www.youtube.com##.ytp-videowall-still:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=SHORTS])

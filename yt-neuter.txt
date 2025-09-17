@@ -89,9 +89,9 @@ www.youtube.com##.ytd-guide-entry-renderer[href="/feed/clips"]
 ! premium
 www.youtube.com##a.ytd-guide-entry-renderer[href="/premium"]
 ! explore section
-!www.youtube.com##ytd-guide-section-renderer:has(#guide-section-title:has-text(Explore))
-!www.youtube.com##ytd-guide-entry-renderer:has(#endpoint[href="/feed/explore"])
-!www.youtube.com##ytd-mini-guide-entry-renderer:has(#endpoint[href="/feed/explore"])
+www.youtube.com##ytd-guide-section-renderer:has(#guide-section-title:has-text(Explore))
+www.youtube.com##ytd-guide-entry-renderer:has(#endpoint[href="/feed/explore"])
+www.youtube.com##ytd-mini-guide-entry-renderer:has(#endpoint[href="/feed/explore"])
 ! browse channels
 !www.youtube.com##ytd-guide-entry-renderer:has(#endpoint[href="/feed/guide_builder"])
 ! more from youtube

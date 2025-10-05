@@ -1,0 +1,17 @@
+!! members only
+! todo: homepage, search, end of video (H/S might work, but not tested yet)
+youtube.com##yt-lockup-view-model:has(yt-badge-view-model:has(.yt-badge-shape--commerce))
+!youtube.com##ytd-video-renderer:has(ytd-badge-supported-renderer:has-text(Members Only))
+!youtube.com##ytd-rich-item-renderer:has(badge-shape:has-text(Members Only))
+
+!! youtube featured (currently inactive - is this actually problematic for videos that dont also have members only?)
+! todo: homepage, search, end of video
+!youtube.com##yt-lockup-view-model:has(yt-badge-view-model:has-text(YouTube featured))
+
+
+
+!! fundraiser
+! todo: end of video
+youtube.com##yt-lockup-view-model:has(yt-badge-view-model:has-text(Fundraiser))
+youtube.com##ytd-video-renderer:has(ytd-badge-supported-renderer:has-text(Fundraiser))
+youtube.com##ytd-rich-item-renderer:has(badge-shape:has-text(Fundraiser))
